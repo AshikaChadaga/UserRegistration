@@ -77,7 +77,7 @@ public class UserRegistration {
 	public static void checkValidPassword(String password) {
 
 		boolean isPassword;
-		String passwordRegex = "^(?=.*[A-Z])(?=.*[0-9])([a-zA-Z0-9]*([@#$%^&-+=()])*).{8,}$";
+		String passwordRegex = "^(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&-+=()])([a-zA-Z0-9]*).{8,}$";
 		Pattern patternObject = Pattern.compile(passwordRegex);
 		if (password == null) {
 			isPassword = false;
@@ -97,21 +97,21 @@ public class UserRegistration {
 
 		Scanner scannerObject = new Scanner(System.in);
 
-		System.out.println("Enter Your First Name");
-		String firstName = scannerObject.nextLine();
-		checkValidFirstName(firstName);
-
-		System.out.println("Enter Your Last Name");
-		String lastName = scannerObject.nextLine();
-		checkValidLastName(lastName);
-
-		System.out.println("Enter Your Email Address");
-		String email = scannerObject.nextLine();
-		checkValidEmail(email);
-
-		System.out.println("Enter Your Mobile Number");
-		String mobileNumber = scannerObject.nextLine();
-		checkValidMobileNumber(mobileNumber);
+//		System.out.println("Enter Your First Name");
+//		String firstName = scannerObject.nextLine();
+//		checkValidFirstName(firstName);
+//
+//		System.out.println("Enter Your Last Name");
+//		String lastName = scannerObject.nextLine();
+//		checkValidLastName(lastName);
+//
+//		System.out.println("Enter Your Email Address");
+//		String email = scannerObject.nextLine();
+//		checkValidEmail(email);
+//
+//		System.out.println("Enter Your Mobile Number");
+//		String mobileNumber = scannerObject.nextLine();
+//		checkValidMobileNumber(mobileNumber);
 
 		System.out.println("Enter Your Password");
 		String password = scannerObject.nextLine();

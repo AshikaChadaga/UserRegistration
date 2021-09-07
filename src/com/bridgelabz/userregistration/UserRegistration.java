@@ -60,8 +60,8 @@ public class UserRegistration {
 	public static void checkValidMobileNumber(String mobileNumber){
 		
 		boolean isMobileNumber;
-		String emailRegex = "^[0-9]{2}\\s{1}[0-9]{10}$";
-		Pattern patternObject = Pattern.compile(emailRegex);
+		String mobileRegex = "^[0-9]{2}\\s{1}[0-9]{10}$";
+		Pattern patternObject = Pattern.compile(mobileRegex);
 		if (mobileNumber == null) {
             isMobileNumber = false;
         }
@@ -73,6 +73,23 @@ public class UserRegistration {
 		else
 			System.out.println(mobileNumber+" is an Invalid Mobile Number");
 	}
+	
+	public static void checkValidPassword(String password){
+		
+		boolean isPassword;
+		String passwordRegex = "^([a-zA-Z0-9]*[\\-\\!\\@\\#\\$\\%\\^\\&\\*\\(\\)\\_\\+]*){8,}$";
+		Pattern patternObject = Pattern.compile(passwordRegex);
+		if (password == null) {
+            isPassword = false;
+        }
+        Matcher matcherObject = patternObject.matcher(password);
+        isPassword =  matcherObject.matches();
+        
+        if(isPassword)
+			System.out.println(password+" is a Valid  Password\n");
+		else
+			System.out.println(password+" is an Invalid Password");
+	}
 
 	public static void main(String[] args) {
 
@@ -81,20 +98,24 @@ public class UserRegistration {
 		Scanner scannerObject = new Scanner(System.in);
 
 		System.out.println("Enter Your First Name");
-		String firstName = scannerObject.nextLine();
+		String firstName = scannerObject.next();
 		checkValidFirstName(firstName);
 		
 		System.out.println("Enter Your Last Name");
-		String lastName = scannerObject.nextLine();
+		String lastName = scannerObject.next();
 		checkValidLastName(lastName);
 		
 		System.out.println("Enter Your Email Address");
-		String email = scannerObject.nextLine();
+		String email = scannerObject.next();
 		checkValidEmail(email);
 		
 		System.out.println("Enter Your Mobile Number");
 		String mobileNumber = scannerObject.nextLine();
 		checkValidMobileNumber(mobileNumber);
+		
+		System.out.println("Enter Your Password");
+		String password = scannerObject.nextLine();
+		checkValidPassword(password);
 
 		scannerObject.close();
 

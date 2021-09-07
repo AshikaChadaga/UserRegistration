@@ -97,21 +97,21 @@ public class UserRegistration {
 
 		Scanner scannerObject = new Scanner(System.in);
 
-//		System.out.println("Enter Your First Name");
-//		String firstName = scannerObject.nextLine();
-//		checkValidFirstName(firstName);
-//
-//		System.out.println("Enter Your Last Name");
-//		String lastName = scannerObject.nextLine();
-//		checkValidLastName(lastName);
-//
-//		System.out.println("Enter Your Email Address");
-//		String email = scannerObject.nextLine();
-//		checkValidEmail(email);
-//
-//		System.out.println("Enter Your Mobile Number");
-//		String mobileNumber = scannerObject.nextLine();
-//		checkValidMobileNumber(mobileNumber);
+		System.out.println("Enter Your First Name");
+		String firstName = scannerObject.nextLine();
+		checkValidFirstName(firstName);
+
+		System.out.println("Enter Your Last Name");
+		String lastName = scannerObject.nextLine();
+		checkValidLastName(lastName);
+
+		System.out.println("Enter Your Email Address");
+		String email = scannerObject.nextLine();
+		checkValidEmail(email);
+
+		System.out.println("Enter Your Mobile Number");
+		String mobileNumber = scannerObject.nextLine();
+		checkValidMobileNumber(mobileNumber);
 
 		System.out.println("Enter Your Password");
 		String password = scannerObject.nextLine();
